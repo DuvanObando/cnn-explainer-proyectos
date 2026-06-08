@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Módulo 18 · Reconocimiento del estado del clima por fotografía</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/modulo.css">
+</head>
+<body>
+    <header class="modulo-header">
+        <div class="container">
+            <a href="../index.html" class="back-link">← Volver al inicio</a>
+            <div class="modulo-meta">
+                <span class="modulo-num">Módulo 18</span>
+                <span class="modulo-icon">🌦️</span>
+            </div>
+            <h1>Reconocimiento del estado del clima por fotografía</h1>
+        </div>
+    </header>
+
+    <main class="container modulo-body">
+
+        <section class="card-section">
+            <h2>🎯 Objetivo</h2>
+            <p>Comprender cómo una CNN infiere condiciones climáticas (soleado, nublado, lluvioso) a partir de características como brillo del cielo, presencia de nubes y saturación general de la imagen.</p>
+        </section>
+
+        <section class="card-section">
+            <h2>🧪 Herramienta interactiva (CNN Explainer)</h2>
+            <p class="ayuda">
+                Usa la herramienta de abajo para explorar la red neuronal. Si prefieres más espacio,
+                <a href="../cnn-app/" target="_blank" rel="noopener">ábrela en una pestaña nueva</a>.
+            </p>
+            <div class="iframe-wrapper">
+                <iframe src="../cnn-app/" title="CNN Explainer" loading="lazy"></iframe>
+            </div>
+        </section>
+
+        <section class="card-section">
+            <h2>📋 Pasos detallados</h2>
+            <ol class="pasos">
+                <li>Obtener tres fotografías de exteriores: día soleado, día nublado y día lluvioso.</li>
+                <li>Cargar la imagen soleada y observar la primera capa convolucional.</li>
+                <li>Identificar filtros que respondan a gradientes de azul claro y alto brillo.</li>
+                <li>Cargar la imagen nublada y buscar filtros que capturen tonos grises difusos.</li>
+                <li>Cargar la imagen lluviosa y observar filtros que respondan a reflejos en superficies mojadas.</li>
+                <li>Comparar las activaciones en la segunda capa para las tres condiciones.</li>
+                <li>Revisar ReLU y observar qué zonas del cielo quedan activas en cada clima.</li>
+                <li>Avanzar a MaxPooling y verificar qué información global de luminosidad se conserva.</li>
+                <li>Llegar a la capa de salida y anotar la distribución de probabilidades para cada clima.</li>
+                <li>Concluir qué característica visual (brillo, tono o textura de nubes) fue más informativa.</li>
+            </ol>
+        </section>
+
+        <section class="card-section">
+            <h2>🔍 Observaciones por capa</h2>
+            <p class="ayuda">Aquí van las capturas de pantalla y notas tomadas durante la exploración.</p>
+
+            <div class="observacion">
+                <h3>Capa convolucional 1 (conv_1_1)</h3>
+                <img src="../img/modulo-18/conv1.png" alt="Activaciones conv_1_1" onerror="this.style.display='none'">
+                <p><em>(Pendiente añadir captura y observaciones.)</em></p>
+            </div>
+
+            <div class="observacion">
+                <h3>Capa ReLU 1</h3>
+                <img src="../img/modulo-18/relu1.png" alt="Activaciones ReLU" onerror="this.style.display='none'">
+                <p><em>(Pendiente añadir captura y observaciones.)</em></p>
+            </div>
+
+            <div class="observacion">
+                <h3>Capa MaxPooling</h3>
+                <img src="../img/modulo-18/maxpool.png" alt="Activaciones MaxPooling" onerror="this.style.display='none'">
+                <p><em>(Pendiente añadir captura y observaciones.)</em></p>
+            </div>
+
+            <div class="observacion">
+                <h3>Capa de salida (output)</h3>
+                <img src="../img/modulo-18/output.png" alt="Probabilidades de salida" onerror="this.style.display='none'">
+                <p><em>(Pendiente añadir captura y observaciones.)</em></p>
+            </div>
+        </section>
+
+        <section class="card-section">
+            <h2>📊 Tabla comparativa de activaciones</h2>
+            <div class="tabla-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Capa</th>
+                            <th>Clase A</th>
+                            <th>Clase B</th>
+                            <th>Diferencia observada</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>conv_1_1</td><td>—</td><td>—</td><td>—</td></tr>
+                        <tr><td>relu_1_1</td><td>—</td><td>—</td><td>—</td></tr>
+                        <tr><td>max_pool_1</td><td>—</td><td>—</td><td>—</td></tr>
+                        <tr><td>conv_2_1</td><td>—</td><td>—</td><td>—</td></tr>
+                        <tr><td>output (softmax)</td><td>—</td><td>—</td><td>—</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section class="card-section">
+            <h2>📝 Conclusiones</h2>
+            <p><em>(Pendiente redactar las conclusiones tras realizar la exploración.)</em></p>
+        </section>
+
+        <nav class="modulo-nav">
+            <a href="modulo-17.html" class="btn-nav">← Módulo anterior</a>
+            <a href="modulo-19.html" class="btn-nav btn-nav-next">Módulo siguiente →</a>
+        </nav>
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>Proyecto académico · 2026 · Duvan</p>
+        </div>
+    </footer>
+</body>
+</html>

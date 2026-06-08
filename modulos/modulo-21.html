@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Módulo 21 · Reconocimiento de plantas: hojas sanas vs. hojas enfermas</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/modulo.css">
+</head>
+<body>
+    <header class="modulo-header">
+        <div class="container">
+            <a href="../index.html" class="back-link">← Volver al inicio</a>
+            <div class="modulo-meta">
+                <span class="modulo-num">Módulo 21</span>
+                <span class="modulo-icon">🌿</span>
+            </div>
+            <h1>Reconocimiento de plantas: hojas sanas vs. hojas enfermas</h1>
+        </div>
+    </header>
+
+    <main class="container modulo-body">
+
+        <section class="card-section">
+            <h2>🎯 Objetivo</h2>
+            <p>Estudiar cómo la CNN detecta indicadores visuales de enfermedad en hojas (manchas, decoloración, bordes dañados) comparando con hojas sanas, simulando un sistema de diagnóstico agrícola visual básico.</p>
+        </section>
+
+        <section class="card-section">
+            <h2>🧪 Herramienta interactiva (CNN Explainer)</h2>
+            <p class="ayuda">
+                Usa la herramienta de abajo para explorar la red neuronal. Si prefieres más espacio,
+                <a href="../cnn-app/" target="_blank" rel="noopener">ábrela en una pestaña nueva</a>.
+            </p>
+            <div class="iframe-wrapper">
+                <iframe src="../cnn-app/" title="CNN Explainer" loading="lazy"></iframe>
+            </div>
+        </section>
+
+        <section class="card-section">
+            <h2>📋 Pasos detallados</h2>
+            <ol class="pasos">
+                <li>Fotografiar una hoja sana (verde uniforme) y una hoja enferma (con manchas o amarillamiento).</li>
+                <li>Cargar la imagen de hoja sana y observar la primera capa convolucional.</li>
+                <li>Identificar filtros que respondan al color verde uniforme y la textura lisa.</li>
+                <li>Cargar la hoja enferma y buscar filtros que capturen manchas o variaciones de color.</li>
+                <li>Avanzar a la segunda capa y comparar cómo cambian los detectores de textura.</li>
+                <li>Revisar ReLU y observar qué zonas de la hoja enferma generan más activación.</li>
+                <li>Observar MaxPooling y verificar si las manchas persisten como característica dominante.</li>
+                <li>Llegar a la capa densa y anotar la probabilidad asignada a cada clase.</li>
+                <li>Probar con una hoja levemente enferma y observar si el modelo la clasifica como sana o enferma.</li>
+                <li>Documentar qué tipo de daño visual (mancha, borde dañado, decoloración) generó más activación.</li>
+            </ol>
+        </section>
+
+        <section class="card-section">
+            <h2>🔍 Observaciones por capa</h2>
+            <p class="ayuda">Aquí van las capturas de pantalla y notas tomadas durante la exploración.</p>
+
+            <div class="observacion">
+                <h3>Capa convolucional 1 (conv_1_1)</h3>
+                <img src="../img/modulo-21/conv1.png" alt="Activaciones conv_1_1" onerror="this.style.display='none'">
+                <p><em>(Pendiente añadir captura y observaciones.)</em></p>
+            </div>
+
+            <div class="observacion">
+                <h3>Capa ReLU 1</h3>
+                <img src="../img/modulo-21/relu1.png" alt="Activaciones ReLU" onerror="this.style.display='none'">
+                <p><em>(Pendiente añadir captura y observaciones.)</em></p>
+            </div>
+
+            <div class="observacion">
+                <h3>Capa MaxPooling</h3>
+                <img src="../img/modulo-21/maxpool.png" alt="Activaciones MaxPooling" onerror="this.style.display='none'">
+                <p><em>(Pendiente añadir captura y observaciones.)</em></p>
+            </div>
+
+            <div class="observacion">
+                <h3>Capa de salida (output)</h3>
+                <img src="../img/modulo-21/output.png" alt="Probabilidades de salida" onerror="this.style.display='none'">
+                <p><em>(Pendiente añadir captura y observaciones.)</em></p>
+            </div>
+        </section>
+
+        <section class="card-section">
+            <h2>📊 Tabla comparativa de activaciones</h2>
+            <div class="tabla-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Capa</th>
+                            <th>Clase A</th>
+                            <th>Clase B</th>
+                            <th>Diferencia observada</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>conv_1_1</td><td>—</td><td>—</td><td>—</td></tr>
+                        <tr><td>relu_1_1</td><td>—</td><td>—</td><td>—</td></tr>
+                        <tr><td>max_pool_1</td><td>—</td><td>—</td><td>—</td></tr>
+                        <tr><td>conv_2_1</td><td>—</td><td>—</td><td>—</td></tr>
+                        <tr><td>output (softmax)</td><td>—</td><td>—</td><td>—</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section class="card-section">
+            <h2>📝 Conclusiones</h2>
+            <p><em>(Pendiente redactar las conclusiones tras realizar la exploración.)</em></p>
+        </section>
+
+        <nav class="modulo-nav">
+            <a href="modulo-20.html" class="btn-nav">← Módulo anterior</a>
+            <a href="modulo-22.html" class="btn-nav btn-nav-next">Módulo siguiente →</a>
+        </nav>
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>Proyecto académico · 2026 · Duvan</p>
+        </div>
+    </footer>
+</body>
+</html>

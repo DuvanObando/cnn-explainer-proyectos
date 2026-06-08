@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Módulo 17 · Detección de grietas en paredes</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/modulo.css">
+</head>
+<body>
+    <header class="modulo-header">
+        <div class="container">
+            <a href="../index.html" class="back-link">← Volver al inicio</a>
+            <div class="modulo-meta">
+                <span class="modulo-num">Módulo 17</span>
+                <span class="modulo-icon">🧱</span>
+            </div>
+            <h1>Detección de grietas en paredes</h1>
+        </div>
+    </header>
+
+    <main class="container modulo-body">
+
+        <section class="card-section">
+            <h2>🎯 Objetivo</h2>
+            <p>Estudiar cómo los filtros de bordes de una CNN detectan discontinuidades superficiales en estructuras, explorando el uso potencial en inspección estructural automatizada básica.</p>
+        </section>
+
+        <section class="card-section">
+            <h2>🧪 Herramienta interactiva (CNN Explainer)</h2>
+            <p class="ayuda">
+                Usa la herramienta de abajo para explorar la red neuronal. Si prefieres más espacio,
+                <a href="../cnn-app/" target="_blank" rel="noopener">ábrela en una pestaña nueva</a>.
+            </p>
+            <div class="iframe-wrapper">
+                <iframe src="../cnn-app/" title="CNN Explainer" loading="lazy"></iframe>
+            </div>
+        </section>
+
+        <section class="card-section">
+            <h2>📋 Pasos detallados</h2>
+            <ol class="pasos">
+                <li>Fotografiar una pared con grietas visibles y otra pared en buen estado.</li>
+                <li>Cargar la imagen de pared sin grietas y observar la primera capa convolucional.</li>
+                <li>Identificar qué filtros detectan la textura homogénea del repello.</li>
+                <li>Cargar la pared con grietas y buscar filtros que respondan a líneas irregulares.</li>
+                <li>Avanzar a la segunda capa y observar cómo se combinan los detectores de líneas.</li>
+                <li>Revisar ReLU y verificar cómo las grietas generan activaciones específicas en filtros orientados.</li>
+                <li>Observar MaxPooling y confirmar que los trazos de grietas persisten a pesar de la reducción.</li>
+                <li>Llegar a la capa densa y anotar la probabilidad de clasificación "con grieta".</li>
+                <li>Probar con una imagen de grieta pintada sobre la pared (no estructural) y comparar resultados.</li>
+                <li>Documentar la orientación de los filtros que mejor detectaron las grietas (horizontal, vertical, diagonal).</li>
+            </ol>
+        </section>
+
+        <section class="card-section">
+            <h2>🔍 Observaciones por capa</h2>
+            <p class="ayuda">Aquí van las capturas de pantalla y notas tomadas durante la exploración.</p>
+
+            <div class="observacion">
+                <h3>Capa convolucional 1 (conv_1_1)</h3>
+                <img src="../img/modulo-17/conv1.png" alt="Activaciones conv_1_1" onerror="this.style.display='none'">
+                <p><em>(Pendiente añadir captura y observaciones.)</em></p>
+            </div>
+
+            <div class="observacion">
+                <h3>Capa ReLU 1</h3>
+                <img src="../img/modulo-17/relu1.png" alt="Activaciones ReLU" onerror="this.style.display='none'">
+                <p><em>(Pendiente añadir captura y observaciones.)</em></p>
+            </div>
+
+            <div class="observacion">
+                <h3>Capa MaxPooling</h3>
+                <img src="../img/modulo-17/maxpool.png" alt="Activaciones MaxPooling" onerror="this.style.display='none'">
+                <p><em>(Pendiente añadir captura y observaciones.)</em></p>
+            </div>
+
+            <div class="observacion">
+                <h3>Capa de salida (output)</h3>
+                <img src="../img/modulo-17/output.png" alt="Probabilidades de salida" onerror="this.style.display='none'">
+                <p><em>(Pendiente añadir captura y observaciones.)</em></p>
+            </div>
+        </section>
+
+        <section class="card-section">
+            <h2>📊 Tabla comparativa de activaciones</h2>
+            <div class="tabla-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Capa</th>
+                            <th>Clase A</th>
+                            <th>Clase B</th>
+                            <th>Diferencia observada</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>conv_1_1</td><td>—</td><td>—</td><td>—</td></tr>
+                        <tr><td>relu_1_1</td><td>—</td><td>—</td><td>—</td></tr>
+                        <tr><td>max_pool_1</td><td>—</td><td>—</td><td>—</td></tr>
+                        <tr><td>conv_2_1</td><td>—</td><td>—</td><td>—</td></tr>
+                        <tr><td>output (softmax)</td><td>—</td><td>—</td><td>—</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section class="card-section">
+            <h2>📝 Conclusiones</h2>
+            <p><em>(Pendiente redactar las conclusiones tras realizar la exploración.)</em></p>
+        </section>
+
+        <nav class="modulo-nav">
+            <a href="modulo-16.html" class="btn-nav">← Módulo anterior</a>
+            <a href="modulo-18.html" class="btn-nav btn-nav-next">Módulo siguiente →</a>
+        </nav>
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>Proyecto académico · 2026 · Duvan</p>
+        </div>
+    </footer>
+</body>
+</html>

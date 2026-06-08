@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Módulo 22 · Clasificación de imágenes de radiografías: normal vs. con anomalía</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/modulo.css">
+</head>
+<body>
+    <header class="modulo-header">
+        <div class="container">
+            <a href="../index.html" class="back-link">← Volver al inicio</a>
+            <div class="modulo-meta">
+                <span class="modulo-num">Módulo 22</span>
+                <span class="modulo-icon">🩻</span>
+            </div>
+            <h1>Clasificación de imágenes de radiografías: normal vs. con anomalía</h1>
+        </div>
+    </header>
+
+    <main class="container modulo-body">
+
+        <section class="card-section">
+            <h2>🎯 Objetivo</h2>
+            <p>Analizar conceptualmente cómo una CNN podría ayudar a identificar regiones anómalas en imágenes médicas simplificadas, explorando qué filtros responden a diferencias de densidad y sombras.</p>
+        </section>
+
+        <section class="card-section">
+            <h2>🧪 Herramienta interactiva (CNN Explainer)</h2>
+            <p class="ayuda">
+                Usa la herramienta de abajo para explorar la red neuronal. Si prefieres más espacio,
+                <a href="../cnn-app/" target="_blank" rel="noopener">ábrela en una pestaña nueva</a>.
+            </p>
+            <div class="iframe-wrapper">
+                <iframe src="../cnn-app/" title="CNN Explainer" loading="lazy"></iframe>
+            </div>
+        </section>
+
+        <section class="card-section">
+            <h2>📋 Pasos detallados</h2>
+            <ol class="pasos">
+                <li>Usar imágenes de radiografías de dominio público (sin datos de pacientes).</li>
+                <li>Cargar una radiografía de tórax normal y observar las activaciones de la primera capa.</li>
+                <li>Identificar filtros que respondan a los gradientes de densidad (pulmones vs. costillas).</li>
+                <li>Cargar una radiografía con una zona de mayor densidad (posible anomalía) y comparar.</li>
+                <li>Avanzar a la segunda capa y observar cómo se combinan los detectores de densidad.</li>
+                <li>Revisar ReLU y notar qué zonas de la radiografía quedan más activas en el caso anómalo.</li>
+                <li>Observar MaxPooling y verificar qué regiones de interés persisten tras la reducción.</li>
+                <li>Llegar a la capa de salida y anotar la distribución de probabilidades.</li>
+                <li>Reflexionar sobre las limitaciones éticas del uso de CNN en diagnóstico sin supervisión médica.</li>
+                <li>Documentar qué capas fueron más sensibles a las diferencias de densidad entre las imágenes.</li>
+            </ol>
+        </section>
+
+        <section class="card-section">
+            <h2>🔍 Observaciones por capa</h2>
+            <p class="ayuda">Aquí van las capturas de pantalla y notas tomadas durante la exploración.</p>
+
+            <div class="observacion">
+                <h3>Capa convolucional 1 (conv_1_1)</h3>
+                <img src="../img/modulo-22/conv1.png" alt="Activaciones conv_1_1" onerror="this.style.display='none'">
+                <p><em>(Pendiente añadir captura y observaciones.)</em></p>
+            </div>
+
+            <div class="observacion">
+                <h3>Capa ReLU 1</h3>
+                <img src="../img/modulo-22/relu1.png" alt="Activaciones ReLU" onerror="this.style.display='none'">
+                <p><em>(Pendiente añadir captura y observaciones.)</em></p>
+            </div>
+
+            <div class="observacion">
+                <h3>Capa MaxPooling</h3>
+                <img src="../img/modulo-22/maxpool.png" alt="Activaciones MaxPooling" onerror="this.style.display='none'">
+                <p><em>(Pendiente añadir captura y observaciones.)</em></p>
+            </div>
+
+            <div class="observacion">
+                <h3>Capa de salida (output)</h3>
+                <img src="../img/modulo-22/output.png" alt="Probabilidades de salida" onerror="this.style.display='none'">
+                <p><em>(Pendiente añadir captura y observaciones.)</em></p>
+            </div>
+        </section>
+
+        <section class="card-section">
+            <h2>📊 Tabla comparativa de activaciones</h2>
+            <div class="tabla-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Capa</th>
+                            <th>Clase A</th>
+                            <th>Clase B</th>
+                            <th>Diferencia observada</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>conv_1_1</td><td>—</td><td>—</td><td>—</td></tr>
+                        <tr><td>relu_1_1</td><td>—</td><td>—</td><td>—</td></tr>
+                        <tr><td>max_pool_1</td><td>—</td><td>—</td><td>—</td></tr>
+                        <tr><td>conv_2_1</td><td>—</td><td>—</td><td>—</td></tr>
+                        <tr><td>output (softmax)</td><td>—</td><td>—</td><td>—</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section class="card-section">
+            <h2>📝 Conclusiones</h2>
+            <p><em>(Pendiente redactar las conclusiones tras realizar la exploración.)</em></p>
+        </section>
+
+        <nav class="modulo-nav">
+            <a href="modulo-21.html" class="btn-nav">← Módulo anterior</a>
+            <a href="modulo-23.html" class="btn-nav btn-nav-next">Módulo siguiente →</a>
+        </nav>
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>Proyecto académico · 2026 · Duvan</p>
+        </div>
+    </footer>
+</body>
+</html>

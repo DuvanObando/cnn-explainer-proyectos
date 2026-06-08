@@ -1,0 +1,206 @@
+/* ===== Estilos específicos de página de módulo ===== */
+
+.modulo-header {
+    background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
+    color: white;
+    padding: 2.5rem 0 3rem;
+}
+
+.back-link {
+    display: inline-block;
+    color: white;
+    text-decoration: none;
+    opacity: 0.85;
+    margin-bottom: 1.25rem;
+    font-size: 0.95rem;
+    transition: opacity 0.2s;
+}
+
+.back-link:hover {
+    opacity: 1;
+}
+
+.modulo-meta {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 0.75rem;
+}
+
+.modulo-num {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 0.35rem 0.85rem;
+    border-radius: 999px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.modulo-icon {
+    font-size: 2rem;
+}
+
+.modulo-header h1 {
+    font-size: 2.1rem;
+    line-height: 1.25;
+}
+
+.modulo-body {
+    padding: 2.5rem 1.5rem 3rem;
+}
+
+.card-section {
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    margin-bottom: 1.75rem;
+}
+
+.card-section h2 {
+    color: #4f46e5;
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+}
+
+.card-section h3 {
+    color: #1f2937;
+    font-size: 1.1rem;
+    margin: 1rem 0 0.5rem;
+}
+
+.ayuda {
+    background: #f3f4f6;
+    padding: 0.75rem 1rem;
+    border-left: 4px solid #7c3aed;
+    border-radius: 4px;
+    font-size: 0.92rem;
+    margin-bottom: 1.25rem;
+}
+
+/* ===== Iframe de CNN Explainer ===== */
+.iframe-wrapper {
+    position: relative;
+    width: 100%;
+    height: 720px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+    border: 1px solid #e5e7eb;
+}
+
+.iframe-wrapper iframe {
+    width: 100%;
+    height: 100%;
+    border: 0;
+    display: block;
+}
+
+/* ===== Lista de pasos ===== */
+.pasos {
+    padding-left: 1.5rem;
+}
+
+.pasos li {
+    margin-bottom: 0.65rem;
+    line-height: 1.55;
+}
+
+.pasos li::marker {
+    color: #7c3aed;
+    font-weight: 700;
+}
+
+/* ===== Observaciones ===== */
+.observacion {
+    border-left: 3px solid #c4b5fd;
+    padding: 0.75rem 1rem;
+    margin-bottom: 1.25rem;
+    background: #faf9ff;
+    border-radius: 0 6px 6px 0;
+}
+
+.observacion img {
+    max-width: 100%;
+    border-radius: 6px;
+    margin: 0.5rem 0;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+/* ===== Tabla ===== */
+.tabla-wrapper {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.95rem;
+}
+
+table th,
+table td {
+    padding: 0.7rem 1rem;
+    text-align: left;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+table thead th {
+    background: #f3f4f6;
+    color: #4f46e5;
+    font-weight: 600;
+}
+
+table tbody tr:hover {
+    background: #faf9ff;
+}
+
+/* ===== Navegación entre módulos ===== */
+.modulo-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 2rem;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.btn-nav {
+    background: white;
+    color: #4f46e5;
+    border: 2px solid #4f46e5;
+    padding: 0.7rem 1.4rem;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.2s;
+}
+
+.btn-nav:hover {
+    background: #4f46e5;
+    color: white;
+}
+
+.btn-nav-next {
+    background: #4f46e5;
+    color: white;
+}
+
+.btn-nav-next:hover {
+    background: #7c3aed;
+    border-color: #7c3aed;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 600px) {
+    .modulo-header h1 {
+        font-size: 1.5rem;
+    }
+    .iframe-wrapper {
+        height: 500px;
+    }
+    .card-section {
+        padding: 1.25rem;
+    }
+}

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Módulo 04 · Identificación de caras con y sin lentes</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/modulo.css">
+</head>
+<body>
+    <header class="modulo-header">
+        <div class="container">
+            <a href="../index.html" class="back-link">← Volver al inicio</a>
+            <div class="modulo-meta">
+                <span class="modulo-num">Módulo 04</span>
+                <span class="modulo-icon">👓</span>
+            </div>
+            <h1>Identificación de caras con y sin lentes</h1>
+        </div>
+    </header>
+
+    <main class="container modulo-body">
+
+        <section class="card-section">
+            <h2>🎯 Objetivo</h2>
+            <p>Estudiar qué características faciales capta la CNN al distinguir rostros con lentes de aquellos sin ellos, centrándose en los filtros que detectan formas circulares o rectangulares asociadas a los lentes.</p>
+        </section>
+
+        <section class="card-section">
+            <h2>🧪 Herramienta interactiva (CNN Explainer)</h2>
+            <p class="ayuda">
+                Usa la herramienta de abajo para explorar la red neuronal. Si prefieres más espacio,
+                <a href="../cnn-app/" target="_blank" rel="noopener">ábrela en una pestaña nueva</a>.
+            </p>
+            <div class="iframe-wrapper">
+                <iframe src="../cnn-app/" title="CNN Explainer" loading="lazy"></iframe>
+            </div>
+        </section>
+
+        <section class="card-section">
+            <h2>📋 Pasos detallados</h2>
+            <ol class="pasos">
+                <li>Conseguir dos imágenes de rostros frontales: uno con lentes y uno sin ellos.</li>
+                <li>Cargar la imagen sin lentes y observar la activación de la primera capa conv.</li>
+                <li>Identificar qué filtros resaltan los ojos, cejas y contorno del rostro.</li>
+                <li>Cargar la imagen con lentes y comparar las mismas posiciones de filtro.</li>
+                <li>Buscar en la segunda capa convolucional filtros que respondan específicamente al marco de los lentes.</li>
+                <li>Avanzar a la capa ReLU y observar cómo se suprimen regiones de fondo sin importancia.</li>
+                <li>Revisar la capa MaxPooling y verificar que los rasgos distintivos persisten tras la reducción.</li>
+                <li>Llegar a la capa densa y anotar la distribución de probabilidades para ambas clases.</li>
+                <li>Intentar con una imagen de lentes de sol y observar si la activación cambia respecto a lentes ópticos.</li>
+                <li>Concluir qué capa fue la más "decisiva" para distinguir entre ambas categorías.</li>
+            </ol>
+        </section>
+
+        <section class="card-section">
+            <h2>🔍 Observaciones por capa</h2>
+            <p class="ayuda">Aquí van las capturas de pantalla y notas tomadas durante la exploración.</p>
+
+            <div class="observacion">
+                <h3>Capa convolucional 1 (conv_1_1)</h3>
+                <img src="../img/modulo-04/conv1.png" alt="Activaciones conv_1_1" onerror="this.style.display='none'">
+                <p><em>(Pendiente añadir captura y observaciones.)</em></p>
+            </div>
+
+            <div class="observacion">
+                <h3>Capa ReLU 1</h3>
+                <img src="../img/modulo-04/relu1.png" alt="Activaciones ReLU" onerror="this.style.display='none'">
+                <p><em>(Pendiente añadir captura y observaciones.)</em></p>
+            </div>
+
+            <div class="observacion">
+                <h3>Capa MaxPooling</h3>
+                <img src="../img/modulo-04/maxpool.png" alt="Activaciones MaxPooling" onerror="this.style.display='none'">
+                <p><em>(Pendiente añadir captura y observaciones.)</em></p>
+            </div>
+
+            <div class="observacion">
+                <h3>Capa de salida (output)</h3>
+                <img src="../img/modulo-04/output.png" alt="Probabilidades de salida" onerror="this.style.display='none'">
+                <p><em>(Pendiente añadir captura y observaciones.)</em></p>
+            </div>
+        </section>
+
+        <section class="card-section">
+            <h2>📊 Tabla comparativa de activaciones</h2>
+            <div class="tabla-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Capa</th>
+                            <th>Clase A</th>
+                            <th>Clase B</th>
+                            <th>Diferencia observada</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>conv_1_1</td><td>—</td><td>—</td><td>—</td></tr>
+                        <tr><td>relu_1_1</td><td>—</td><td>—</td><td>—</td></tr>
+                        <tr><td>max_pool_1</td><td>—</td><td>—</td><td>—</td></tr>
+                        <tr><td>conv_2_1</td><td>—</td><td>—</td><td>—</td></tr>
+                        <tr><td>output (softmax)</td><td>—</td><td>—</td><td>—</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section class="card-section">
+            <h2>📝 Conclusiones</h2>
+            <p><em>(Pendiente redactar las conclusiones tras realizar la exploración.)</em></p>
+        </section>
+
+        <nav class="modulo-nav">
+            <a href="modulo-03.html" class="btn-nav">← Módulo anterior</a>
+            <a href="modulo-05.html" class="btn-nav btn-nav-next">Módulo siguiente →</a>
+        </nav>
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>Proyecto académico · 2026 · Duvan</p>
+        </div>
+    </footer>
+</body>
+</html>
