@@ -2,6 +2,8 @@
 
 Página web educativa que documenta 25 proyectos prácticos para explorar el funcionamiento de las Redes Neuronales Convolucionales (CNN) usando la herramienta interactiva **CNN Explainer** del Polo Club de Georgia Tech.
 
+https://duvanobando.github.io/cnn-explainer-proyectos/
+
 ## 🔗 Herramienta de referencia
 
 [CNN Explainer - poloclub.github.io/cnn-explainer](https://poloclub.github.io/cnn-explainer/)
