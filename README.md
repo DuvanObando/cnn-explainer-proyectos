@@ -26,4 +26,4 @@ Duvan Obando
 
 ## 📄 Licencia
 
-Proyecto académico de uso educativo.
+Proyecto académico de uso educativo / Programa de ingenieria de sotfware de la Universidad Manuela Beltran
