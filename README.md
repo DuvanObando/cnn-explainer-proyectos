@@ -20,7 +20,7 @@ Comprender, a través de la exploración visual sin necesidad de código, cómo 
 
 ## 👤 Autor
 
-Duvan
+Duvan Obando
 
 ## 📄 Licencia
 
