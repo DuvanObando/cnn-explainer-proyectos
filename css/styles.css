@@ -1,0 +1,155 @@
+/* ===== Reset básico ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    line-height: 1.6;
+    color: #1f2937;
+    background: #f9fafb;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+/* ===== Hero / cabecera ===== */
+.hero {
+    background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
+    color: white;
+    padding: 4rem 0;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.75rem;
+}
+
+.hero .subtitle {
+    font-size: 1.15rem;
+    opacity: 0.9;
+    margin-bottom: 2rem;
+}
+
+.btn-hero {
+    display: inline-block;
+    background: white;
+    color: #4f46e5;
+    padding: 0.75rem 1.75rem;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.btn-hero:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* ===== Secciones principales ===== */
+main {
+    padding: 3rem 1.5rem;
+}
+
+.intro {
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    margin-bottom: 3rem;
+}
+
+.intro h2,
+.modulos h2 {
+    font-size: 1.75rem;
+    margin-bottom: 1rem;
+    color: #4f46e5;
+}
+
+.intro p {
+    margin-bottom: 1rem;
+}
+
+/* ===== Grid de módulos ===== */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 1.25rem;
+    margin-top: 1.5rem;
+}
+
+.card {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 12px;
+    text-decoration: none;
+    color: inherit;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    transition: transform 0.2s, box-shadow 0.2s;
+    border: 2px solid transparent;
+    display: flex;
+    flex-direction: column;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 28px rgba(79, 70, 229, 0.15);
+    border-color: #4f46e5;
+}
+
+.card-icono {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.card-num {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #7c3aed;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 0.5rem;
+}
+
+.card-titulo {
+    font-size: 1.05rem;
+    margin-bottom: 1rem;
+    color: #1f2937;
+    flex-grow: 1;
+}
+
+.card-cta {
+    font-size: 0.9rem;
+    color: #4f46e5;
+    font-weight: 600;
+}
+
+/* ===== Footer ===== */
+footer {
+    background: #1f2937;
+    color: #d1d5db;
+    padding: 2rem 0;
+    text-align: center;
+    margin-top: 3rem;
+}
+
+footer a {
+    color: #a78bfa;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 600px) {
+    .hero h1 {
+        font-size: 1.75rem;
+    }
+    .hero .subtitle {
+        font-size: 1rem;
+    }
+}
